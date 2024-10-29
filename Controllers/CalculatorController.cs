@@ -20,28 +20,28 @@ public class CalculatorController : ControllerBase
 
     [HttpPost]
     [Route("Add")]
-    public double Add(CalculatorParameter calcParam)
+    public double Add([FromBody] CalculatorParameter calcParam)
     {
         return _calculator.Add(calcParam);
     }
 
     [HttpPost]
     [Route("Subtract")]
-    public double Subtract(CalculatorParameter calcParam)
+    public double Subtract([FromBody] CalculatorParameter calcParam)
     {
         return _calculator.Subtract(calcParam);
     }
 
     [HttpPost]
     [Route("Multiply")]
-    public double Multiply(CalculatorParameter calcParam)
+    public double Multiply([FromBody] CalculatorParameter calcParam)
     {
         return _calculator.Multiply(calcParam);
     }
 
     [HttpPost]
     [Route("DivideBy")]
-    public double DivideBy(CalculatorParameter calcParam)
+    public double DivideBy([FromBody] CalculatorParameter calcParam)
     {
         return _calculator.DivideBy(calcParam);
     }
